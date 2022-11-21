@@ -12,8 +12,8 @@ public class Main {
         static String createDatabaseQuery = "CREATE DATABASE ipl3";
         static String useDatabaseQuery = "USE ipl3";
         static String createTableQuery = "CREATE TABLE demo(id INTEGER, name varchar(10))";
-        static String insertValueQuery1 = "insert into demo values(11, 'Shubham')";
-        static String insertValueQuery2 = "insert into demo values(12, 'Sumit')";
+        //static String insertValueQuery1 = "insert into demo values(11, 'Shubham')";
+        //static String insertValueQuery2 = "insert into demo values(12, 'Sumit')";
         static String matchesFileScriptPath = "src/com/shubham/matches.sql";
         static String deliveriesFileScriptPath = "src/com/shubham/matches.sql";
 
