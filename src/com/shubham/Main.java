@@ -1,11 +1,5 @@
 package com.shubham;
-import java.io.FileNotFoundException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.HashMap;
-import java.util.List;
+import java.sql.*;
 
 public class Main {
     static final String DB_URL = "jdbc:mysql://localhost/";
@@ -20,19 +14,55 @@ public class Main {
         try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
             Statement statement = conn.createStatement();
             ){
-            try {
-                HashMap<String, Integer> matchesPlayedAllYear = findNumberOfMatchesPlayedPerYear(statement);
-                HashMap<String, Integer> matchesWonAllTeam = findNumberOfMatchesWonOfAllTeam(statement);
-                HashMap<String, Integer> extraRunsConcededPerTeamIn2016 = findExtraRunsConcededPerTeam(statement, deliveries);
-                HashMap<String, Integer> mostEconomicalBowlerIn2015 = findTheMostEconomicalBowlerIn2015(statement, deliveries);
-                HashMap<String, Integer> teamWhoWonTheTossAndMatch = findTheTeamWhoWonTheTossAndWonTheMatch(statement);
-
-            } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
-            }
+            statement.executeUpdate("USE ipl_data_set");
+            ResultSet matchesPlayedAllYear = findNumberOfMatchesPlayedPerYear(statement);
+            //matchesPlayedAllYear.getString("");
+            ResultSet matchesWonAllTeam = findNumberOfMatchesWonOfAllTeam(statement);
+            ResultSet extraRunsConcededPerTeamIn2016 = findExtraRunsConcededPerTeam(statement);
+            ResultSet mostEconomicalBowlerIn2015 = findTheMostEconomicalBowlerIn2015(statement);
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private static ResultSet findNumberOfMatchesPlayedPerYear(Statement statement) {
+        ResultSet rs;
+        try {
+            rs = statement.executeQuery(Main.numberOfMatchesPlayedPerYearQuery);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rs;
+    }
+
+    private static ResultSet findNumberOfMatchesWonOfAllTeam(Statement statement) {
+        ResultSet rs;
+        try {
+            rs = statement.executeQuery(Main.NumberOfMatchesWonOfAllTeamQuery);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rs;
+    }
+
+    private static ResultSet findExtraRunsConcededPerTeam(Statement statement) {
+        ResultSet rs;
+        try {
+            rs = statement.executeQuery(Main.NumberOfMatchesWonOfAllTeamQuery);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rs;
+    }
+
+    private static ResultSet findTheMostEconomicalBowlerIn2015(Statement statement) {
+        ResultSet rs;
+        try {
+            rs = statement.executeQuery(Main.NumberOfMatchesWonOfAllTeamQuery);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rs;
     }
 }
