@@ -14,6 +14,8 @@ public class Main {
         static String createTableQuery = "CREATE TABLE demo(id INTEGER, name varchar(10))";
         static String insertValueQuery1 = "insert into demo values(11, 'Shubham')";
         static String insertValueQuery2 = "insert into demo values(12, 'Sumit')";
+        static String matchesFileScriptPath = "src/com/shubham/matches.sql";
+        static String deliveriesFileScriptPath = "src/com/shubham/matches.sql";
 
 
     public static void main(String[] args){
@@ -24,11 +26,35 @@ public class Main {
                 createDatabase(statement, createDatabaseQuery);
                 useDatabase(statement, useDatabaseQuery);
                 createTable(statement, createTableQuery);
-                insertValue(statement, insertValueQuery1);
-                insertValue(statement, insertValueQuery2);
+                createMatchesTable(statement, matchesFileScriptPath);
+                createDeliveriesTable(statement, deliveriesFileScriptPath);
+
         }
         catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+
+
+    private static void createMatchesTable(Statement statement, String matchesFileScriptPath) {
+        try {
+            statement.executeUpdate("SOURCE "+matchesFileScriptPath);
+            System.out.println("matches table created Successfully");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private static void createDeliveriesTable(Statement statement, String deliveriesFileScriptPath) {
+        try {
+            statement.executeUpdate("SOURCE "+deliveriesFileScriptPath);
+            System.out.println("Table created Successfully");
+            System.out.println("deliveries table created Successfully");
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
