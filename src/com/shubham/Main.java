@@ -14,10 +14,20 @@ public class Main {
             ){
                 String sql = "CREATE DATABASE IPL";
                 stmt.executeUpdate(sql);
-                System.out.println("Database created successfully...");
+
+                csvFilePath = "."
+                convertCSVtoSQLFile(String path);
+                createTable(String sql);
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
     }
+    public static String createTable(String sql, ){
+    }
+
+    public static String createTable(String sql, ){
+    }
+
+
 }
