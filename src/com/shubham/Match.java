@@ -1,8 +1,8 @@
 package com.shubham;
 
 public class Match {
-    private String id;
-    private String season;
+    private int id;
+    private int season;
     private String city;
 
     private String date;
@@ -11,26 +11,26 @@ public class Match {
     private String tossWinner;
     private String tossDecision;
     private String result;
-    private String dlApplied;
+    private int dlApplied;
     private String winner;
-    private String winByRuns;
-    private String winByWickets;
+    private int winByRuns;
+    private int winByWickets;
     private String playerOFMatch;
     private String venue;
     private String umpire1;
     private String umpire2;
     private String umpire3;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
-    public String getSeason() {
+    public int getSeason() {
         return season;
     }
-    public void setSeason(String season) {
+    public void setSeason(int season) {
         this.season = season;
     }
 
@@ -85,11 +85,11 @@ public class Match {
         this.result = result;
     }
 
-    public String getDlApplied() {
+    public int getDlApplied() {
         return dlApplied;
     }
 
-    public void setDlApplied(String dlApplied) {
+    public void setDlApplied(int dlApplied) {
         this.dlApplied = dlApplied;
     }
 
@@ -101,19 +101,19 @@ public class Match {
         this.winner = winner;
     }
 
-    public String getWinByRuns() {
+    public int getWinByRuns() {
         return winByRuns;
     }
 
-    public void setWinByRuns(String winByRuns) {
+    public void setWinByRuns(int winByRuns) {
         this.winByRuns = winByRuns;
     }
 
-    public String getWinByWickets() {
+    public int getWinByWickets() {
         return winByWickets;
     }
 
-    public void setWinByWickets(String winByWickets) {
+    public void setWinByWickets(int winByWickets) {
         this.winByWickets = winByWickets;
     }
 
