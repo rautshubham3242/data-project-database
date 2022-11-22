@@ -1,42 +1,42 @@
 package com.shubham;
 
 public class Delivery {
-    private String matchId;
-    private String inning;
+    private int matchId;
+    private int inning;
     private String battingTeam;
     private String bowlingTeam;
-    private String over;
-    private String ball;
+    private int over;
+    private int ball;
     private String batsman;
     private String nonStriker;
     private String bowler;
-    private String isSuperOver;
-    private String wideRuns;
-    private String byeRuns;
-    private String legByeRuns;
-    private String noBallRuns;
-    private String penaltyRuns;
-    private String batsmanRuns;
-    private String extraRuns;
-    private String totalRuns;
+    private int isSuperOver;
+    private int wideRuns;
+    private int byeRuns;
+    private int legByeRuns;
+    private int noBallRuns;
+    private int penaltyRuns;
+    private int batsmanRuns;
+    private int extraRuns;
+    private int totalRuns;
     private String playerDismissed;
     private String dismissalKind;
     private String fielder;
 
 
-    public String getMatchId() {
+    public int getMatchId() {
         return matchId;
     }
 
-    public void setMatchId(String matchId) {
+    public void setMatchId(int matchId) {
         this.matchId = matchId;
     }
 
-    public String getInning() {
+    public int getInning() {
         return inning;
     }
 
-    public void setInning(String inning) {
+    public void setInning(int inning) {
         this.inning = inning;
     }
 
@@ -56,19 +56,19 @@ public class Delivery {
         this.bowlingTeam = bowlingTeam;
     }
 
-    public String getOver() {
+    public int getOver() {
         return over;
     }
 
-    public void setOver(String over) {
+    public void setOver(int over) {
         this.over = over;
     }
 
-    public String getBall() {
+    public int getBall() {
         return ball;
     }
 
-    public void setBall(String ball) {
+    public void setBall(int ball) {
         this.ball = ball;
     }
 
@@ -96,75 +96,75 @@ public class Delivery {
         this.bowler = bowler;
     }
 
-    public String getIsSuperOver() {
+    public int getIsSuperOver() {
         return isSuperOver;
     }
 
-    public void setIsSuperOver(String isSuperOver) {
+    public void setIsSuperOver(int isSuperOver) {
         this.isSuperOver = isSuperOver;
     }
 
-    public String getWideRuns() {
+    public int getWideRuns() {
         return wideRuns;
     }
 
-    public void setWideRuns(String wideRuns) {
+    public void setWideRuns(int wideRuns) {
         this.wideRuns = wideRuns;
     }
 
-    public String getByeRuns() {
+    public int getByeRuns() {
         return byeRuns;
     }
 
-    public void setByeRuns(String byeRuns) {
+    public void setByeRuns(int byeRuns) {
         this.byeRuns = byeRuns;
     }
 
-    public String getLegByeRuns() {
+    public int getLegByeRuns() {
         return legByeRuns;
     }
 
-    public void setLegByeRuns(String legByeRuns) {
+    public void setLegByeRuns(int legByeRuns) {
         this.legByeRuns = legByeRuns;
     }
 
-    public String getNoBallRuns() {
+    public int getNoBallRuns() {
         return noBallRuns;
     }
 
-    public void setNoBallRuns(String noBallRuns) {
+    public void setNoBallRuns(int noBallRuns) {
         this.noBallRuns = noBallRuns;
     }
 
-    public String getPenaltyRuns() {
+    public int getPenaltyRuns() {
         return penaltyRuns;
     }
 
-    public void setPenaltyRuns(String penaltyRuns) {
+    public void setPenaltyRuns(int penaltyRuns) {
         this.penaltyRuns = penaltyRuns;
     }
 
-    public String getBatsmanRuns() {
+    public int getBatsmanRuns() {
         return batsmanRuns;
     }
 
-    public void setBatsmanRuns(String batsmanRuns) {
+    public void setBatsmanRuns(int batsmanRuns) {
         this.batsmanRuns = batsmanRuns;
     }
 
-    public String getExtraRuns() {
+    public int getExtraRuns() {
         return extraRuns;
     }
 
-    public void setExtraRuns(String extraRuns) {
+    public void setExtraRuns(int extraRuns) {
         this.extraRuns = extraRuns;
     }
 
-    public String getTotalRuns() {
+    public int getTotalRuns() {
         return totalRuns;
     }
 
-    public void setTotalRuns(String totalRuns) {
+    public void setTotalRuns(int totalRuns) {
         this.totalRuns = totalRuns;
     }
 
