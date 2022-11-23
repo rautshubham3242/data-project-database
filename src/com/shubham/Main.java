@@ -132,12 +132,9 @@ public class Main {
         return economicalPlayer;
     }
 
-
     private static List<Match> getMatchesData(Statement statement){
         ResultSet rs;
         List<Match> matches = new ArrayList<>();
-
-
         try {
             rs = statement.executeQuery("SELECT * FROM matches;");
             while (rs.next()){
